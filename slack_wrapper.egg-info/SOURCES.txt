@@ -1,8 +1,8 @@
 setup.cfg
 setup.py
 slack_wrapper/__init__.py
-slack_wrapper/slack_api.py
-slack_wrapper/slack_rtm.py
+slack_wrapper/api.py
+slack_wrapper/rtm.py
 slack_wrapper.egg-info/PKG-INFO
 slack_wrapper.egg-info/SOURCES.txt
 slack_wrapper.egg-info/dependency_links.txt
