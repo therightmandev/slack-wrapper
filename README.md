@@ -3,9 +3,11 @@ slack-wrapper
 
 ##Installation
 Just run the following command if you have pip installed:
+
 	pip install slack-wrapper
 
 ##Example:
+
 	from slack_wrapper import SlackAPI, SlackRTM
 	
 	# Get token from the first line of 'token.txt'
