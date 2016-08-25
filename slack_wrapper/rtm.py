@@ -6,15 +6,31 @@ class SlackRTM():
 		self.connected = False
 	def connect(self):
 		self.ws = websocket.WebSocket()
-		self.connection_json = json.loads(requests.get(
+		self.json_response = json.loads(requests.get(
 					'https://slack.com/api/rtm.start',
 					params={
 						'token': self.TOKEN,
 						'simple_latest': 'true',
 		                                'no_unreads': 'true'
 					}).text)
-		self.connect_url = self.connection_json['url']
-		self.ws.connect(self.connect_url)
+		if self.json_response['ok']:
+			self.socket_url = self.json_response['url']
+			print('url received:', self.socket_url)
+			self.ws.connect(self.socket_url)
+			hello = self.receive_dict()
+			if hello['type'] == 'hello':
+				print('Successfully connected to socket')
+				return True
+			elif hello['type'] == 'error':
+				print('Error connecting to the socket...')
+				print('Error message:', hello['error']['msg'])
+				retry = input('Retry?(Y/n)')
+				if retry.lower() == 'y' or retry == '':
+					return self.connect()
+				else:
+					return False
+
+
 		if True: #TODO if response is ok...
 			self.connected = True
 			return True
