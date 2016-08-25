@@ -6,7 +6,7 @@ class SlackAPI():
 		self.domain = 'https://slack.com/api/'
 
 	def get_channel_list(self):
-		"""return updated channel list"""
+		"""returns updated channel list"""
 		response_dict = json.loads(requests.get(
 					self.domain + 'channels.list',
 					params={
@@ -17,13 +17,15 @@ class SlackAPI():
 		return self.channel_list
 
 	def get_channel_name(self, channel_id):
-	        self.channel_list = self.get_channel_list()
-	        for channel in self.channel_list:
-	                if channel["id"] == channel_id:
-	                        return channel["name"]
+		"""returns the channel name when given an id"""
+		self.channel_list = self.get_channel_list()
+		for channel in self.channel_list:
+			if channel["id"] == channel_id:
+				return channel["name"]
 
 	def get_channel_id(self, channel_name):
-        	self.channel_list = self.get_channel_list()
-	        for channel in self.channel_list:
-	                if channel["name"] == channel_name:
-	                        return channel["id"]
+		"""returns the channel id when given a name"""
+		self.channel_list = self.get_channel_list()
+		for channel in self.channel_list:
+			if channel["name"] == channel_name:
+				return channel["id"]
