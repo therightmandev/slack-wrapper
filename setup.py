@@ -6,7 +6,7 @@ setup(
     'requests',
     'websocket-client'
   ],
-  version='0.1',
+  version='0.2',
   description='A wrapper for the slack API and RTM',
   author='therightman',
   author_email='therightmandev@gmail.com',
