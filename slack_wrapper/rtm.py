@@ -15,7 +15,7 @@ class SlackRTM():
 					}).text)
 		if self.json_response['ok']:
 			self.socket_url = self.json_response['url']
-			print('url received:', self.socket_url)
+			print('url received')
 			self.ws.connect(self.socket_url)
 			hello = self.receive_dict()
 			if hello['type'] == 'hello':
@@ -29,6 +29,9 @@ class SlackRTM():
 					return self.connect()
 				else:
 					return False
+		else:
+			print('Error while getting the url:', self.json_response['error'])
+			return False
 
 
 		if True: #TODO if response is ok...

@@ -1,6 +1,6 @@
 Metadata-Version: 1.1
 Name: slack-wrapper
-Version: 0.1
+Version: 0.2
 Summary: A wrapper for the slack API and RTM
 Home-page: https://github.com/therightmandev/slack-wrapper
 Author: therightman
