@@ -1,0 +1,10 @@
+setup.cfg
+setup.py
+slack_wrapper/__init__.py
+slack_wrapper/slack_api.py
+slack_wrapper/slack_rtm.py
+slack_wrapper.egg-info/PKG-INFO
+slack_wrapper.egg-info/SOURCES.txt
+slack_wrapper.egg-info/dependency_links.txt
+slack_wrapper.egg-info/requires.txt
+slack_wrapper.egg-info/top_level.txt
