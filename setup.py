@@ -12,7 +12,7 @@ setup(
   author_email='therightmandev@gmail.com',
   url='https://github.com/therightmandev/slack-wrapper',
   license='MIT',
-  download_url='https://github.com/therightmandev/slack-wrapper/tarball/0.1',
+  download_url='https://github.com/therightmandev/slack-wrapper/tarball/0.2',
   keywords=['slack', 'api', 'bot', 'bots'],
   classifiers=[],
 )
