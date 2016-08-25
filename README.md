@@ -4,6 +4,7 @@ slack-wrapper
 ##Example:
 	from slack_wrapper import SlackAPI, SlackRTM
 	
+	# Get token from the first line of 'token.txt'
 	with open('token.txt') as f:
 	        TOKEN = f.readlines()[0][:-1]
 	
