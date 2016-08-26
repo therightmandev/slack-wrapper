@@ -1,2 +1,7 @@
 # File containing token:
 token.txt
+
+__pycache__/
+*.pyc
+
+test_input.txt

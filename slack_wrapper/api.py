@@ -4,6 +4,7 @@ class SlackAPI():
 	def __init__(self, token):
 		self.TOKEN = token
 		self.domain = 'https://slack.com/api/'
+		self.session = requests.Session()
 
 	def has_error(self, response_dict, log="An error ocurred:"):
 		if response_dict['ok']:
@@ -17,10 +18,10 @@ class SlackAPI():
 		"""executes any method and returns a dictionary"""
 		params = {'token': self.TOKEN}
 		params.update(extra_params)
-		response_dict = json.loads(requests.get(
+		response_dict = self.session.get(
                                         self.domain + 'channels.list',
                                         params=params
-                                ).text)
+                                ).json()
 		return response_dict
 
 	def get_channel_list(self):
