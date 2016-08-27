@@ -7,7 +7,7 @@ Just run the following command if you have pip installed:
 	pip install slack-wrapper
 
 ##Example:
-
+```python
 	from slack_wrapper import SlackAPI, SlackRTM
 	
 	# Get token from the first line of 'token.txt'
@@ -39,3 +39,4 @@ Just run the following command if you have pip installed:
 	
 	#send a message through RTM:
 	rtm.msg("hey, sorry for spam, just testing", my_channel_id)
+```
