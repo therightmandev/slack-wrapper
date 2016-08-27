@@ -1,4 +1,5 @@
 from setuptools import setup
+
 setup(
   name='slack-wrapper',
   packages=['slack_wrapper'],

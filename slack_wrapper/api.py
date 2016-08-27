@@ -24,7 +24,7 @@ class SlackAPI():
         else:
             time.sleep(1)
         response_dict = self.session.get(
-            self.domain + 'channels.list',
+            self.domain + method,
             params=params
         ).json()
         self.last_request = int(time.time())
