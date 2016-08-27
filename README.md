@@ -1,3 +1,6 @@
+[![Build
+Status](https://travis-ci.org/therightmandev/slack-wrapper.svg?branch=master)](https://travis-ci.org/therightmandev/slack-wrapper)
+
 slack-wrapper
 =============
 
