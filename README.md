@@ -11,15 +11,15 @@ Just run the following command if you have pip installed:
 
 ##Example:
 ```python
-	from slack_wrapper import SlackAPI, SlackRTM
+	from slack_wrapper import API, RTM
 	
 	# Get token from the first line of 'token.txt'
 	with open('token.txt') as f:
 	        TOKEN = f.readlines()[0][:-1]
 	
 	# Create RTM and API instances:
-	api = SlackAPI(TOKEN)
-	rtm = SlackRTM(TOKEN)
+	api = API(TOKEN)
+	rtm = RTM(TOKEN)
 	
 	# ~~Using the API:~~ #
 	#Get the list of channels:
