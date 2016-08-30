@@ -1,6 +1,6 @@
 import websocket, json, requests
 
-class SlackRTM():
+class   RTM():
     def __init__(self, token):
         self.TOKEN = token
         self.connected = False

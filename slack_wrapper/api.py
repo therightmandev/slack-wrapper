@@ -1,6 +1,6 @@
 import requests, json, time
 
-class SlackAPI():
+class API():
     def __init__(self, token):
         self.TOKEN = token
         self.domain = 'https://slack.com/api/'

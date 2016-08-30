@@ -2,14 +2,14 @@ import unittest, sys
 from unittest.mock import MagicMock
 
 import slack_wrapper, json
-from slack_wrapper import SlackAPI, SlackRTM
+from slack_wrapper import API, RTM
 
 
 class TestAPI(unittest.TestCase):
 
 	def setUp(self):
 		self.TOKEN = 'some_token'
-		self.api = SlackAPI(self.TOKEN)
+		self.api = API(self.TOKEN)
 		#Mock the API(these values are needed for other tests too):
 		self.mock_response = MagicMock()
 		self.original_mock_response = MagicMock()
@@ -59,7 +59,7 @@ class TestRTM(unittest.TestCase):
         self.mock_response = MagicMock()
         self.mock_response_dict = {'ok': True, 'url': 'http://example.com'}
         self.TOKEN = 'some_token'
-        self.rtm = SlackRTM(self.TOKEN)
+        self.rtm = RTM(self.TOKEN)
         #mock requests session:
         self.mock_response.json.return_value = self.mock_response_dict
         self.rtm.session = MagicMock()

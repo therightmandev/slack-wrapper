@@ -1,2 +1,2 @@
-from .api import SlackAPI
-from .rtm import SlackRTM
+from .api import API
+from .rtm import RTM
