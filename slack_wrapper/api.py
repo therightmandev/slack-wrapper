@@ -53,3 +53,25 @@ class API():
             if channel["name"] == channel_name:
                 return channel["id"]
 
+    def get_user_list(self):
+        """returns updated user list"""
+        response_dict = self.api_method('users.list')
+        if not self.has_error(response_dict, log='Error getting user list:'):
+            self.user_list = response_dict['members']
+            return self.user_list
+        else:
+            return None
+
+    def get_user_id(self, username):
+        self.user_list = self.get_user_list()
+        for user in self.user_list:
+            if user['name'] == username:
+                return user['id']
+
+    def get_user_name(self, user_id):
+        response_dict = self.api_method('users.info', {'user': user_id})
+        if not self.has_error(response_dict, log='Error getting user info'):
+            return response_dict['user']['name']
+        else:
+            return None
+
