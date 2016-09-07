@@ -85,7 +85,7 @@ class API():
     def get_user_email(self, user_id):
         user = self.get_user_info(user_id)
         if user:
-            return user['profile']['email']
+            return user['profile'].get(['email'], '')
         else:
             return user
 
