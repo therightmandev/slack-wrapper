@@ -62,6 +62,13 @@ class API():
         else:
             return None
 
+    def get_user_info(self, user_id):
+        response_dict = self.api_method('users.info', {'user': user_id})
+        if not self.has_error(response_dict, log='Error getting user info'):
+            return response_dict['user']
+        else:
+            return None
+
     def get_user_id(self, username):
         self.user_list = self.get_user_list()
         for user in self.user_list:
@@ -69,9 +76,16 @@ class API():
                 return user['id']
 
     def get_user_name(self, user_id):
-        response_dict = self.api_method('users.info', {'user': user_id})
-        if not self.has_error(response_dict, log='Error getting user info'):
-            return response_dict['user']['name']
+        user = self.get_user_info(user_id)
+        if user:
+            return user['name']
         else:
-            return None
+            return user
+
+    def get_user_email(self, user_id):
+        user = self.get_user_info(user_id)
+        if user:
+            return user['profile']['email']
+        else:
+            return user
 

@@ -7,13 +7,13 @@ setup(
     'requests',
     'websocket-client'
   ],
-  version='0.4.1',
+  version='0.4.2',
   description='A wrapper for the slack API and RTM',
   author='therightman',
   author_email='therightmandev@gmail.com',
   url='https://github.com/therightmandev/slack-wrapper',
   license='MIT',
-  download_url='https://github.com/therightmandev/slack-wrapper/tarball/0.4.1',
+  download_url='https://github.com/therightmandev/slack-wrapper/tarball/0.4.2',
   keywords=['slack', 'api', 'bot', 'bots'],
   classifiers=[],
 )
