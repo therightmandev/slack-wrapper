@@ -4,12 +4,12 @@ Status](https://travis-ci.org/therightmandev/slack-wrapper.svg?branch=master)](h
 slack-wrapper
 =============
 
-##Installation
+## Installation
 Just run the following command if you have pip installed:
 
 	pip install slack-wrapper
 
-##Example:
+## Example:
 ```python
 	from slack_wrapper import API, RTM
 	
@@ -36,7 +36,7 @@ Just run the following command if you have pip installed:
 	rtm.connect() #connects to a Real Time Messaging websocket
 	
 	#the following loop receives 5 events and logs them on the terminal
-	#usually this would be an infinite loop and the events would be handled approprietly
+	#usually this would be an infinite loop and the events would be handled appropriately
 	for x in range(5):
 	        print(rtm.receive_dict())
 	
